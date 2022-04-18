@@ -1,4 +1,5 @@
 import React from "react";
+import _ from "lodash";
 import './navbar.css';
 import { Link } from "react-router-dom";
 import { useSelector , useDispatch} from 'react-redux';
@@ -24,12 +25,14 @@ function Navbar(){
                         <li className="nav-item"><Link className="nav-link" to="/eventos">Eventos</Link></li>  
                         <li className="nav-item"><Link className="nav-link" to="/membrocadastro">Adicionar Membro</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/membros">Membros</Link></li> 
+                        <li className="nav-item"><Link className="nav-link" to="/front">Front</Link></li>
                         <li className="nav-item"><Link className="nav-link" onClick={() => dispatch({type: 'LOG_OUT'})   }>Sair</Link></li> 
                     </>
                     :
                     <>
-                     <li className="nav-item"><Link className="nav-link" to="/eventos/meus">Meus Eventos</Link></li> 
+                     <li className="nav-item"><Link className="nav-link" to="/eventos">Eventos</Link></li> 
                      <li className="nav-item"><Link className="nav-link" to="/membros">Membros</Link></li>
+                     <li className="nav-item"><Link className="nav-link" to="/front">Front</Link></li>
                     <li className="nav-item"><Link className="nav-link" to="/login"></Link></li> 
                     </>
                     }

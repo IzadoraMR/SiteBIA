@@ -13,7 +13,7 @@ function MembroCard({id, img, titulo, detalhes}){
     }, [urlImagem]);
 
      return(
-        <div className="col-md-3 col-sm-12">
+        <div className=" col-md-3 col-sm-12 ">
             <img src={urlImagem} className="card-img-top img-cartao" alt="Foto do Membro" />
 
             <div className="card-body">
@@ -22,7 +22,7 @@ function MembroCard({id, img, titulo, detalhes}){
 
                 <div className="row rodape-card d-flex align-items-center">
                     <div className="col-6">
-                        <Link to={'/membrodetalhes/' } className="btn btn-sm btn-detalhes">+ detalhes</Link>                    
+                        <Link to={'/membrodetalhes' } className="btn btn-sm btn-detalhes">+ detalhes</Link>                    
                     </div>
 
                 </div>

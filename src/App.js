@@ -10,6 +10,9 @@ import UsuarioRecuperarSenha from './view/usuario-recuperar-senha/';
 import EventoCadastro from './view/evento-cadastro';
 import MembroCadastro from './view/membro-cadastro';
 import Membros from './view/membros';
+import MembroDetalhes from './view/membro-detalhes'
+import Front from './view/front'
+    
 
 
 function App() {
@@ -22,13 +25,11 @@ function App() {
                 <Route  exact path='/eventocadastro' component={EventoCadastro}/>
                 <Route  exact path='/membrocadastro' component={MembroCadastro}/>
                 <Route  exact path='/membros' component={Membros}/>
+                <Route  exact path='/membrodetalhes' component={MembroDetalhes}/>
+                <Route  exact path='/front' component={Front}/>
             </Router>
         </Provider>
     );
 }
 
 export default App;
-
-/* import Home from '.view/home';
-
-<Route exact path='/home' component={Home}/> */

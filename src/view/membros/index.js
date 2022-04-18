@@ -9,12 +9,14 @@ import MembroCard from "../../componentes/membro-card";
 function Membros(){
 
     const[membros,setMembros]=useState([]);
+    const[pesquisa,setPesquisa]=useState('');
     let listamembros=[];
 
 
     useEffect(() =>{
         firebase.firestore().collection('membros').get().then(async (resultado)=> {
             await resultado.docs.forEach(doc => {
+                 if(doc.data().titulo.indexOf(pesquisa) >= 0)
                 listamembros.push({
                     id:doc.id,
                     ...doc.data()
