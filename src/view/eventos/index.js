@@ -5,7 +5,7 @@ import Navbar from "../../componentes/navbar";
 import {useSelector} from 'react-redux';
 import firebase from "../../config/firebase";
 import EventoCard from "../../componentes/evento-card";
-import MembroCard from "../../componentes/membro-card";
+
 
 function Eventos(){
   /* Eventos*/
