@@ -11,7 +11,8 @@ import EventoCadastro from './view/evento-cadastro';
 import MembroCadastro from './view/membro-cadastro';
 import Membros from './view/membros';
 import MembroDetalhes from './view/membro-detalhes'
-import Front from './view/front'
+import Eventos from './view/eventos'
+
     
 
 
@@ -19,14 +20,16 @@ function App() {
     return ( 
         <Provider store={store}>
             <Router>
+                <React.Fragment>
                 <Route exact path='/homefire' component={HomeFire} />
                 <Route  exact path='/login' component={Login}/>
                 <Route  exact path='/usuariorecuperarsenha' component={UsuarioRecuperarSenha}/>
                 <Route  exact path='/eventocadastro' component={EventoCadastro}/>
+                 <Route exact path='/eventos' component={Eventos} />
                 <Route  exact path='/membrocadastro' component={MembroCadastro}/>
                 <Route  exact path='/membros' component={Membros}/>
                 <Route  exact path='/membrodetalhes' component={MembroDetalhes}/>
-                <Route  exact path='/front' component={Front}/>
+                </React.Fragment>
             </Router>
         </Provider>
     );
